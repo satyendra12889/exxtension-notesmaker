@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "noteslib/util.js", "noteslib/ContextMenuCreator.js", "noteslib/DataManager.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "nortesdisplayer.html",
+      "default_title": "note's maker"
+   },
+   "content_scripts": [ {
+      "css": [ "assets/styles/style.css" ],
+      "js": [ "noteslib/NotesContent.js" ],
+      "matches": [ "http://*/*" ]
+   } ],
+   "description": " create note's",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwklcPHyN7UK4RrFWm5yxxdTQFxouifE0tsr5txLeSg+6blbo2JTJzEVKv4NVfDr7sir6UNdEepX6U7sqX9q90Rn+EK34ZgIL6nrIHsDevINViqrSyBiEYyYsnDWjmpwSzhWPYF7J1wTftui4pSAnxeY6Bw8zAQ5+MbMjB+SBfESkyXQLEMYLh9d9DF70pLMe+FhyOhuB0Kw7apIBHO5C4bh7bWJAcMTNSq4rfaYNNOl28tB1REVFXv7w657G9UfcW8dtwdjWg1PwOotnKKWvTDvtW+669mnuSgjUjAvikzCHpxRUzwbWvMDRdQc/bWvfcEJHmI7gKZoPq0/LkzrpdQIDAQAB",
+   "manifest_version": 2,
+   "name": "note's maker",
+   "permissions": [ "storage", "background", "activeTab", "tabs", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2"
+}
